@@ -37,6 +37,9 @@
 /// if the resulting map is valid. It fatals if `start_addr` is higher than `end_addr` (non-NAPOT
 /// only) or if a mapping targets an index that is outside the number of allowed indices.
 /// It issues warnings if the address regions of any two mappings overlap (non-NAPOT only).
+
+import addr_map_pkg::*;
+
 module addr_decode_dync #(
   /// Highest index which can happen in a rule.
   parameter int unsigned NoIndices = 32'd0,
